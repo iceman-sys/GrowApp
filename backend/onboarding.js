@@ -6,7 +6,6 @@ const cors = require("cors");
 const app = express();
 app.use(express.json());
 
-// Allow cross origin requests from the frontend
 app.use(cors({
     origin: "http://localhost:8081"
 }));
@@ -25,7 +24,6 @@ const SUPPORT_EMAIL = "WeAreOneWithNature@proton.me";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
 const isLikelyStripeAccountId = (value) => /^acct_[a-zA-Z0-9]+$/.test(String(value || "").trim());
 
-// --- Discord client setup ---
 const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers],
 });
