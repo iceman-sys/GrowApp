@@ -16,7 +16,6 @@ const client = new Client({
 // Login the bot
 client.login(BOT_TOKEN);
 
-// --- Helper function to check if username is in server ---
 async function checkIfAlreadyInServer(username) {
     if (!client.isReady()) {
         console.log("Bot not ready yet. Please wait.");
