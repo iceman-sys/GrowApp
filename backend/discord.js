@@ -10,7 +10,6 @@ app.use(cors({ origin: "http://localhost:8081" }));
 const BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 const SERVER_ID = process.env.DISCORD_SERVER_ID;
 
-// --- Discord client setup ---
 const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers],
 });
