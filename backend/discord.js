@@ -14,11 +14,6 @@ const SERVER_ID = process.env.DISCORD_SERVER_ID;
 const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers],
 });
-
-// client.once('ready', () => {
-//     console.log(`Discord bot logged in as ${client.user.tag}`);
-// });
-
 // Login the bot
 client.login(BOT_TOKEN);
 
